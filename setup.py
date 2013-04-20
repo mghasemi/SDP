@@ -7,7 +7,7 @@ setup(
     author_email='mghasemi@ntu.edu.sg',
     packages=['SDP'],
     #scripts=[''],
-    url='',
+    url='https://github.com/mghasemi/SDP.git',
     license='LICENSE.txt',
     description='A generic python wraper for SDP solvers.',
     long_description=open('README.txt').read(),
