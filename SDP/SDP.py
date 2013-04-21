@@ -329,12 +329,10 @@ class sdp:
             from pycsdp import py_csdp
             admissible_types = [type(numpy.matrix([])), type(list())]
             for idx in range(self.num_blocks):
-                if type(C[idx]) not in admissible_types:
-                    C[idx] = self.matrix_converter(C[idx], 'numpy')
+    			C[idx] = self.matrix_converter(C[idx], 'list')
             for i in range(self.num_constraints):
                 for idx in range(self.num_blocks):
-                    if type(A[i][idx]) not in admissible_types:
-                        A[i][idx] = self.matrix_converter(A[i][idx], 'numpy')
+                    A[i][idx] = self.matrix_converter(A[i][idx], 'list')
             start1 = time()
             start2= clock()
             try:
